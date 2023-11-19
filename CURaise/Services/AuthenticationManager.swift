@@ -11,19 +11,16 @@ import Combine
 import Firebase
 import FirebaseAuth
 import FirebaseAuthCombineSwift
-import FirebaseFirestore
 
 class FirebaseAuthenticationManager: ObservableObject {
-    @Published var userModel: UserModel?
     @Published var isAuthenticated: Bool = UserDefaults.standard.bool(forKey: "authenticated")
+    
+    @Published var token: String = ""
     
     @Published var errorMessage: String?
     @Published var hasError: Bool = false
     
     private var handle: AuthStateDidChangeListenerHandle?
-    
-    private let path: String = "users"
-    private let db = Firestore.firestore()
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -59,28 +56,22 @@ class FirebaseAuthenticationManager: ObservableObject {
     func registerStateListener() {
         handle = Auth.auth().addStateDidChangeListener { auth, user in
             if let user = user {
-                self.db.collection(self.path)
-                    .document(user.uid)
-                    .getDocument(as: UserModel.self) { result in
-                        switch result {
-                        case .success(let userModel):
-                            self.userModel = userModel
-                            withAnimation(.easeInOut) {
-                                self.isAuthenticated = true
-                                UserDefaults.standard.set(true, forKey: "authenticated")
-                            }
-                        case .failure(let error):
-                            self.userModel = nil
-                            withAnimation(.easeInOut) {
-                                self.isAuthenticated = false
-                                UserDefaults.standard.set(false, forKey: "authenticated")
-                            }
-                            self.errorMessage = "Couldn't get user document from Firestore: \(error)"
-                            self.hasError = true
-                        }
+                user.getIDTokenForcingRefresh(true) { idToken, error in
+                    if let error = error {
+                        self.errorMessage = error.localizedDescription
+                        self.hasError = true
+                        
+                        self.isAuthenticated = false
+                        UserDefaults.standard.set(false, forKey: "authenticated")
                     }
+                    
+                    withAnimation(.easeInOut) {
+                        self.token = idToken ?? ""
+                        self.isAuthenticated = true
+                        UserDefaults.standard.set(true, forKey: "authenticated")
+                    }
+                }
             } else {
-                self.userModel = nil
                 withAnimation(.easeInOut) {
                     self.isAuthenticated = false
                     UserDefaults.standard.set(false, forKey: "authenticated")
@@ -100,12 +91,9 @@ class FirebaseAuthenticationManager: ObservableObject {
     }
     
     @MainActor
-    func signIn(creds: AppCredentialsDetails) async {
+    func signIn(email: String, password: String) async {
         do {
-            try await Auth.auth().signIn(withEmail: creds.email, password: creds.password)
-            
-            // show linking page every time a user signs in
-            UserDefaults.standard.set(true, forKey: "show_linking")
+            try await Auth.auth().signIn(withEmail: email, password: password)
         }
         catch {
             print("There was an issue when trying to sign in: \(error)")
@@ -122,10 +110,6 @@ class FirebaseAuthenticationManager: ObservableObject {
             try Auth.auth().signOut()
             
             // clear user defaults
-            UserDefaults.standard.removeObject(forKey: "e_username")
-            UserDefaults.standard.removeObject(forKey: "e_password")
-            UserDefaults.standard.removeObject(forKey: "public_key")
-            UserDefaults.standard.removeObject(forKey: "show_linking")
             UserDefaults.standard.set(false, forKey: "authenticated")
             print("Signed out")
         } catch {
@@ -137,64 +121,18 @@ class FirebaseAuthenticationManager: ObservableObject {
         }
     }
     
-//    @MainActor
-//    func signUp(creds: AppCredentialsDetails, userDetails: UserModel) async {
-//        do {
-//            let authDataResult = try await Auth.auth().createUser(withEmail: creds.email, password: creds.password)
-//
-//            var finalUserDetails = userDetails
-//            finalUserDetails.email = creds.email
-//            finalUserDetails.userId = authDataResult.user.uid
-//
-//            try db.collection(path).document(authDataResult.user.uid).setData(from: finalUserDetails)
-//
-//            // show linking page every time a user signs up
-//            UserDefaults.standard.set(true, forKey: "show_linking")
-//        } catch {
-//            print("There was an issue when trying to sign up: \(error)")
-//            DispatchQueue.main.async {
-//                self.errorMessage = error.localizedDescription
-//                self.hasError = true
-//            }
-//        }
-//    }
-    
-//    func finishSignUp() {
-//        registerStateListener()
-//        UserDefaults.standard.set(true, forKey: "show_linking")
-//    }
-    
-//    func deleteUser() {
-//        if let user = Auth.auth().currentUser {
-//            // delete user doc
-//            self.db.collection(self.path)
-//                .document(user.uid)
-//                .delete { error in
-//                    if let error = error {
-//                        self.errorMessage = error.localizedDescription
-//                        self.hasError = true
-//                    }
-//                    // delete user
-//                    user.delete { error in
-//                        if let error {
-//                            print("Could not delete user")
-//                            DispatchQueue.main.async {
-//                                self.errorMessage = error.localizedDescription
-//                                self.hasError = true
-//                            }
-//                        }
-//
-//                        // clear user defaults
-//                        UserDefaults.standard.removeObject(forKey: "e_username")
-//                        UserDefaults.standard.removeObject(forKey: "e_password")
-//                        UserDefaults.standard.removeObject(forKey: "public_key")
-//                        UserDefaults.standard.removeObject(forKey: "show_linking")
-//                        UserDefaults.standard.set(false, forKey: "authenticated")
-//                        print("Delete account")
-//                    }
-//                }
-//        }
-//    }
+    @MainActor
+    func signUp(email: String, password: String) async {
+        do {
+            let authDataResult = try await Auth.auth().createUser(withEmail: email, password: password)
+        } catch {
+            print("There was an issue when trying to sign up: \(error)")
+            DispatchQueue.main.async {
+                self.errorMessage = error.localizedDescription
+                self.hasError = true
+            }
+        }
+    }
         
     @MainActor
     func sendPasswordReset(email: String? = nil) {

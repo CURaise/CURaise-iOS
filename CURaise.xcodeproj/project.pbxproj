@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C0B26AFD2B09E47A00F3633F /* CURaiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26AFC2B09E47A00F3633F /* CURaiseApp.swift */; };
-		C0B26AFF2B09E47A00F3633F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26AFE2B09E47A00F3633F /* ContentView.swift */; };
 		C0B26B012B09E47A00F3633F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B26B002B09E47A00F3633F /* Assets.xcassets */; };
 		C0B26B042B09E47A00F3633F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B26B032B09E47A00F3633F /* Preview Assets.xcassets */; };
 		C0B26B0B2B09E88D00F3633F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B0A2B09E88D00F3633F /* AuthenticationManager.swift */; };
@@ -39,15 +38,38 @@
 		C0B26B402B09EA8900F3633F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C0B26B3F2B09EA8900F3633F /* FirebaseStorage */; };
 		C0B26B422B09EA8900F3633F /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C0B26B412B09EA8900F3633F /* FirebaseStorageCombine-Community */; };
 		C0B26B452B09EAC700F3633F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C0B26B442B09EAC700F3633F /* Alamofire */; };
+		C0B26B472B09F90600F3633F /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B462B09F90600F3633F /* RouterView.swift */; };
+		C0B26B4A2B09F95A00F3633F /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B492B09F95A00F3633F /* CustomTabBarView.swift */; };
+		C0B26B4C2B09F97200F3633F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B4B2B09F97200F3633F /* TabBarItem.swift */; };
+		C0B26B4E2B09F99A00F3633F /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B4D2B09F99A00F3633F /* CustomTabBarContainerView.swift */; };
+		C0B26B502B09F9A800F3633F /* TabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B4F2B09F9A800F3633F /* TabBarItemsPreferenceKey.swift */; };
+		C0B26B522B09FAD100F3633F /* StudentHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B512B09FAD100F3633F /* StudentHomeView.swift */; };
+		C0B26B572B09FAF900F3633F /* StudentHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B562B09FAF900F3633F /* StudentHomeViewModel.swift */; };
+		C0D11DA62B09FCBB007A4D2E /* Fundraiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DA52B09FCBB007A4D2E /* Fundraiser.swift */; };
+		C0D11DA92B09FEAB007A4D2E /* FundraiserCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */; };
+		C0D11DAE2B0A072B007A4D2E /* FundraiserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DAD2B0A072B007A4D2E /* FundraiserView.swift */; };
+		C0D11DB02B0A0733007A4D2E /* FundraiserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DAF2B0A0733007A4D2E /* FundraiserViewModel.swift */; };
+		C0D11DB22B0A0C3D007A4D2E /* ItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DB12B0A0C3D007A4D2E /* ItemCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C0B26AF92B09E47A00F3633F /* CURaise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CURaise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B26AFC2B09E47A00F3633F /* CURaiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURaiseApp.swift; sourceTree = "<group>"; };
-		C0B26AFE2B09E47A00F3633F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C0B26B002B09E47A00F3633F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0B26B032B09E47A00F3633F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C0B26B0A2B09E88D00F3633F /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		C0B26B462B09F90600F3633F /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		C0B26B492B09F95A00F3633F /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		C0B26B4B2B09F97200F3633F /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		C0B26B4D2B09F99A00F3633F /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
+		C0B26B4F2B09F9A800F3633F /* TabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
+		C0B26B512B09FAD100F3633F /* StudentHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeView.swift; sourceTree = "<group>"; };
+		C0B26B562B09FAF900F3633F /* StudentHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeViewModel.swift; sourceTree = "<group>"; };
+		C0D11DA52B09FCBB007A4D2E /* Fundraiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundraiser.swift; sourceTree = "<group>"; };
+		C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundraiserCardView.swift; sourceTree = "<group>"; };
+		C0D11DAD2B0A072B007A4D2E /* FundraiserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundraiserView.swift; sourceTree = "<group>"; };
+		C0D11DAF2B0A0733007A4D2E /* FundraiserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundraiserViewModel.swift; sourceTree = "<group>"; };
+		C0D11DB12B0A0C3D007A4D2E /* ItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +129,14 @@
 		C0B26AFB2B09E47A00F3633F /* CURaise */ = {
 			isa = PBXGroup;
 			children = (
+				C0D11DA72B09FE9C007A4D2E /* Components */,
+				C0D11DAA2B09FEB3007A4D2E /* Fundraiser */,
+				C0B26B532B09FAD400F3633F /* Student */,
+				C0B26B482B09F92B00F3633F /* CustomTabBar */,
 				C0B26B0D2B09E8DD00F3633F /* Models */,
 				C0B26B0C2B09E8D400F3633F /* Services */,
 				C0B26AFC2B09E47A00F3633F /* CURaiseApp.swift */,
-				C0B26AFE2B09E47A00F3633F /* ContentView.swift */,
+				C0B26B462B09F90600F3633F /* RouterView.swift */,
 				C0B26B002B09E47A00F3633F /* Assets.xcassets */,
 				C0B26B022B09E47A00F3633F /* Preview Content */,
 			);
@@ -136,8 +162,79 @@
 		C0B26B0D2B09E8DD00F3633F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C0D11DA52B09FCBB007A4D2E /* Fundraiser.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C0B26B482B09F92B00F3633F /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C0B26B492B09F95A00F3633F /* CustomTabBarView.swift */,
+				C0B26B4B2B09F97200F3633F /* TabBarItem.swift */,
+				C0B26B4D2B09F99A00F3633F /* CustomTabBarContainerView.swift */,
+				C0B26B4F2B09F9A800F3633F /* TabBarItemsPreferenceKey.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		C0B26B532B09FAD400F3633F /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				C0B26B542B09FAE000F3633F /* Views */,
+				C0B26B552B09FAE600F3633F /* ViewModels */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		C0B26B542B09FAE000F3633F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0B26B512B09FAD100F3633F /* StudentHomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0B26B552B09FAE600F3633F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C0B26B562B09FAF900F3633F /* StudentHomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C0D11DA72B09FE9C007A4D2E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */,
+				C0D11DB12B0A0C3D007A4D2E /* ItemCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C0D11DAA2B09FEB3007A4D2E /* Fundraiser */ = {
+			isa = PBXGroup;
+			children = (
+				C0D11DAB2B0A065B007A4D2E /* Views */,
+				C0D11DAC2B0A0669007A4D2E /* ViewModels */,
+			);
+			path = Fundraiser;
+			sourceTree = "<group>";
+		};
+		C0D11DAB2B0A065B007A4D2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0D11DAD2B0A072B007A4D2E /* FundraiserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0D11DAC2B0A0669007A4D2E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C0D11DAF2B0A0733007A4D2E /* FundraiserViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +340,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D11DB02B0A0733007A4D2E /* FundraiserViewModel.swift in Sources */,
+				C0B26B4C2B09F97200F3633F /* TabBarItem.swift in Sources */,
+				C0D11DAE2B0A072B007A4D2E /* FundraiserView.swift in Sources */,
+				C0B26B522B09FAD100F3633F /* StudentHomeView.swift in Sources */,
+				C0B26B572B09FAF900F3633F /* StudentHomeViewModel.swift in Sources */,
+				C0D11DB22B0A0C3D007A4D2E /* ItemCardView.swift in Sources */,
 				C0B26B0B2B09E88D00F3633F /* AuthenticationManager.swift in Sources */,
-				C0B26AFF2B09E47A00F3633F /* ContentView.swift in Sources */,
+				C0B26B4A2B09F95A00F3633F /* CustomTabBarView.swift in Sources */,
 				C0B26AFD2B09E47A00F3633F /* CURaiseApp.swift in Sources */,
+				C0D11DA92B09FEAB007A4D2E /* FundraiserCardView.swift in Sources */,
+				C0D11DA62B09FCBB007A4D2E /* Fundraiser.swift in Sources */,
+				C0B26B472B09F90600F3633F /* RouterView.swift in Sources */,
+				C0B26B4E2B09F99A00F3633F /* CustomTabBarContainerView.swift in Sources */,
+				C0B26B502B09F9A800F3633F /* TabBarItemsPreferenceKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

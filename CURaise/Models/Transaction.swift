@@ -12,7 +12,7 @@ struct Transaction: Codable, Identifiable {
     let referenceString: String // referral text
     let fundraiserId: Int
     let timestamp: Date // when the transaction was made
-    let items: [FundraiserItem]
+    var items: [FundraiserItem]
     
     let buyerId: Int // id of the student who made the transaction
     

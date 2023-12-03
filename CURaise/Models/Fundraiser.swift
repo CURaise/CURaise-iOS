@@ -37,7 +37,7 @@ struct Fundraiser: Codable, Identifiable {
     }
 }
 
-struct FundraiserItem: Codable, Identifiable {
+struct FundraiserItem: Codable, Identifiable, Equatable {
     let id: Int
     let name: String
     let price: Double

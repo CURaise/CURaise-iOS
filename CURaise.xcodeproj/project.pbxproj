@@ -137,7 +137,6 @@
 			children = (
 				C0D11DA72B09FE9C007A4D2E /* Components */,
 				C0D11DAA2B09FEB3007A4D2E /* Fundraiser */,
-				C0B26B532B09FAD400F3633F /* Student */,
 				C0B26B482B09F92B00F3633F /* CustomTabBar */,
 				C0B26B0D2B09E8DD00F3633F /* Models */,
 				C0B26B0C2B09E8D400F3633F /* Services */,
@@ -187,31 +186,6 @@
 			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
-		C0B26B532B09FAD400F3633F /* Student */ = {
-			isa = PBXGroup;
-			children = (
-				C0B26B542B09FAE000F3633F /* Views */,
-				C0B26B552B09FAE600F3633F /* ViewModels */,
-			);
-			path = Student;
-			sourceTree = "<group>";
-		};
-		C0B26B542B09FAE000F3633F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C0B26B512B09FAD100F3633F /* ExploreFundraisersView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		C0B26B552B09FAE600F3633F /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				C0B26B562B09FAF900F3633F /* ExploreFundraisersViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		C0D11DA72B09FE9C007A4D2E /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +207,7 @@
 		C0D11DAB2B0A065B007A4D2E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C0B26B512B09FAD100F3633F /* ExploreFundraisersView.swift */,
 				C0D11DAD2B0A072B007A4D2E /* FundraiserView.swift */,
 			);
 			path = Views;
@@ -242,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				C0D11DAF2B0A0733007A4D2E /* FundraiserViewModel.swift */,
+				C0B26B562B09FAF900F3633F /* ExploreFundraisersViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

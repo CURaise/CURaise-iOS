@@ -9,7 +9,7 @@ import Foundation
 
 @Observable
 class ProfileViewModel {
-    let user: Student = Student(id: 1, name: "First Last", netid: "fl123", venmoUsername: "username", transactions: sampleTransactions)
+    let user: Student = Student(id: 1, name: "First Last", netid: "fl123", venmoUsername: "username", firebaseUid: "", transactions: sampleTransactions)
     
     
 }

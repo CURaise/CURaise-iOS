@@ -12,13 +12,15 @@ struct Student: Codable, Identifiable {
     let name: String
     let netid: String
     let venmoUsername: String
+    let firebaseUid: String
     let transactions: [Transaction]
     
     enum CodingKeys: String, CodingKey {
         case id
         case name
         case netid
-        case venmoUsername = "venmo_username"
+        case venmoUsername
+        case firebaseUid
         case transactions
     }
 }

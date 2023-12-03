@@ -12,10 +12,8 @@ struct RouterView: View {
     
     var body: some View {
         CustomTabBarContainerView(selection: $tabSelection) {
-            NavigationStack {
-                StudentHomeView()
-            }
-            .tabBarItem(tab: .home, selection: $tabSelection)
+            StudentHomeView()
+                .tabBarItem(tab: .home, selection: $tabSelection)
             
             NavigationStack {
                 Text("")

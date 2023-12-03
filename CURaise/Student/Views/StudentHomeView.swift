@@ -7,36 +7,30 @@
 
 import SwiftUI
 
+// the student home view consists
 struct StudentHomeView: View {
     @Bindable private var vm = StudentHomeViewModel()
     
     var body: some View {
-        VStack {
-            
-            ScrollView {
+        NavigationStack {
+            VStack {
                 
-//                HStack {
-//                    Text("Upcoming Fundraisers")
-//                        .font(.title)
-//                        .bold()
-//                    Spacer()
-//                }
-//                .padding(.horizontal)
-                
-                VStack {
-                    ForEach(vm.fundraisers) { fundraiser in
-                        NavigationLink {
-                            FundraiserView(fundraiser: fundraiser)
-                        } label: {
-                            FundraiserCardView(fundraiser: fundraiser)
-                                .foregroundColor(.primary)
+                ScrollView {
+                    VStack {
+                        ForEach(vm.fundraisers) { fundraiser in
+                            NavigationLink {
+                                FundraiserView(fundraiser: fundraiser)
+                            } label: {
+                                FundraiserCardView(fundraiser: fundraiser)
+                                    .foregroundColor(.primary)
+                            }
                         }
                     }
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
             }
+            .navigationTitle("Upcoming Fundraisers")
         }
-        .navigationTitle("Upcoming Fundraisers")
     }
 }
 

@@ -8,19 +8,22 @@
 import SwiftUI
 
 struct ItemCardView: View {
-    let item: String
+    let item: FundraiserItem
     
     var body: some View {
         VStack(alignment: .leading) {
             
             HStack {
-                Text(item)
+                Text(item.name)
                     .font(.headline)
                 
                 Spacer()
+                
+                Text("$\(item.price, specifier: "%.2f")")
+                    .font(.headline)
             }
             
-            Text("item description")
+            Text(item.description)
             
         }
         .frame(maxWidth: .infinity)
@@ -31,5 +34,5 @@ struct ItemCardView: View {
 }
 
 #Preview {
-    ItemCardView(item: "ITEM")
+    ItemCardView(item: sampleFundraiserItem)
 }

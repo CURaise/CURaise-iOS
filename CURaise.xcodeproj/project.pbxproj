@@ -43,8 +43,8 @@
 		C0B26B4C2B09F97200F3633F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B4B2B09F97200F3633F /* TabBarItem.swift */; };
 		C0B26B4E2B09F99A00F3633F /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B4D2B09F99A00F3633F /* CustomTabBarContainerView.swift */; };
 		C0B26B502B09F9A800F3633F /* TabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B4F2B09F9A800F3633F /* TabBarItemsPreferenceKey.swift */; };
-		C0B26B522B09FAD100F3633F /* StudentHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B512B09FAD100F3633F /* StudentHomeView.swift */; };
-		C0B26B572B09FAF900F3633F /* StudentHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B562B09FAF900F3633F /* StudentHomeViewModel.swift */; };
+		C0B26B522B09FAD100F3633F /* ExploreFundraisersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B512B09FAD100F3633F /* ExploreFundraisersView.swift */; };
+		C0B26B572B09FAF900F3633F /* ExploreFundraisersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B562B09FAF900F3633F /* ExploreFundraisersViewModel.swift */; };
 		C0C247A82B1C2B09006BB3A8 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247A72B1C2B09006BB3A8 /* Club.swift */; };
 		C0C247AA2B1C2B1F006BB3A8 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247A92B1C2B1F006BB3A8 /* Student.swift */; };
 		C0C247AC2B1C2B85006BB3A8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247AB2B1C2B85006BB3A8 /* Transaction.swift */; };
@@ -66,8 +66,8 @@
 		C0B26B4B2B09F97200F3633F /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		C0B26B4D2B09F99A00F3633F /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
 		C0B26B4F2B09F9A800F3633F /* TabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
-		C0B26B512B09FAD100F3633F /* StudentHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeView.swift; sourceTree = "<group>"; };
-		C0B26B562B09FAF900F3633F /* StudentHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeViewModel.swift; sourceTree = "<group>"; };
+		C0B26B512B09FAD100F3633F /* ExploreFundraisersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFundraisersView.swift; sourceTree = "<group>"; };
+		C0B26B562B09FAF900F3633F /* ExploreFundraisersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFundraisersViewModel.swift; sourceTree = "<group>"; };
 		C0C247A72B1C2B09006BB3A8 /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
 		C0C247A92B1C2B1F006BB3A8 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		C0C247AB2B1C2B85006BB3A8 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 		C0B26B542B09FAE000F3633F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C0B26B512B09FAD100F3633F /* StudentHomeView.swift */,
+				C0B26B512B09FAD100F3633F /* ExploreFundraisersView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 		C0B26B552B09FAE600F3633F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C0B26B562B09FAF900F3633F /* StudentHomeViewModel.swift */,
+				C0B26B562B09FAF900F3633F /* ExploreFundraisersViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -352,8 +352,8 @@
 				C0D11DB02B0A0733007A4D2E /* FundraiserViewModel.swift in Sources */,
 				C0B26B4C2B09F97200F3633F /* TabBarItem.swift in Sources */,
 				C0D11DAE2B0A072B007A4D2E /* FundraiserView.swift in Sources */,
-				C0B26B522B09FAD100F3633F /* StudentHomeView.swift in Sources */,
-				C0B26B572B09FAF900F3633F /* StudentHomeViewModel.swift in Sources */,
+				C0B26B522B09FAD100F3633F /* ExploreFundraisersView.swift in Sources */,
+				C0B26B572B09FAF900F3633F /* ExploreFundraisersViewModel.swift in Sources */,
 				C0C247AA2B1C2B1F006BB3A8 /* Student.swift in Sources */,
 				C0C247AC2B1C2B85006BB3A8 /* Transaction.swift in Sources */,
 				C0D11DB22B0A0C3D007A4D2E /* ItemCardView.swift in Sources */,

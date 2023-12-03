@@ -1,5 +1,5 @@
 //
-//  StudentHomeView.swift
+//  ExploreFundraisersView.swift
 //  CURaise
 //
 //  Created by Steven Yu on 11/19/23.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-// the student home view consists
-struct StudentHomeView: View {
-    @Bindable private var vm = StudentHomeViewModel()
+// gets all active fundraisers from the api and shows to user
+struct ExploreFundraisersView: View {
+    @Bindable private var vm = ExploreFundraisersViewModel()
     
     var body: some View {
         NavigationStack {
@@ -27,6 +27,11 @@ struct StudentHomeView: View {
                         }
                     }
                     .padding(.horizontal)
+                    
+                    // for custom navbar
+                    Spacer()
+                        .frame(height: 80)
+                    
                 }
             }
             .navigationTitle("Upcoming Fundraisers")
@@ -35,5 +40,5 @@ struct StudentHomeView: View {
 }
 
 #Preview {
-    StudentHomeView()
+    ExploreFundraisersView()
 }

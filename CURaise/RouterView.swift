@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct RouterView: View {
-    @State private var tabSelection: TabBarItem = .home
+    @State private var tabSelection: TabBarItem = .explore
     
     var body: some View {
         CustomTabBarContainerView(selection: $tabSelection) {
-            StudentHomeView()
-                .tabBarItem(tab: .home, selection: $tabSelection)
+            ExploreFundraisersView()
+                .tabBarItem(tab: .explore, selection: $tabSelection)
             
             NavigationStack {
                 Text("")

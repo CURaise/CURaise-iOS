@@ -20,7 +20,6 @@ struct Fundraiser: Codable, Identifiable {
     let endTime: Date
     
     let items: [FundraiserItem]
-    let transactions: [Transaction]
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -33,7 +32,6 @@ struct Fundraiser: Codable, Identifiable {
         case startTime = "start_datetime"
         case endTime = "end_datetime"
         case items
-        case transactions
     }
 }
 

@@ -10,7 +10,7 @@ import Foundation
 struct Transaction: Codable, Identifiable {
     let id: Int
     let referenceString: String // referral text
-    let fundraiserId: Int
+    let fundraiser: Fundraiser
     let timestamp: Date // when the transaction was made
     var items: [FundraiserItem]
     
@@ -21,7 +21,7 @@ struct Transaction: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case id
         case referenceString
-        case fundraiserId = "fundraiser_id"
+        case fundraiser
         case timestamp
         case items
         case buyerId = "buyer_id"

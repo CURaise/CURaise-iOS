@@ -20,7 +20,7 @@ class CreateTransactionViewModel {
         self.fundraiser = fundraiser
         // just put id as 0 for now
         // TODO: ADD USER LOGIC
-        self.transaction = Transaction(id: 0, referenceString: "", fundraiserId: fundraiser.id, timestamp: Date.now, items: [], buyerId: -1, transactionComplete: false)
+        self.transaction = Transaction(id: 0, referenceString: "", fundraiser: fundraiser, timestamp: Date.now, items: [], buyerId: -1, transactionComplete: false)
         self.paymentStatus = false
         self.orderSuccessful = nil
     }

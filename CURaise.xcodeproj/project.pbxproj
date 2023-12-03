@@ -51,6 +51,9 @@
 		C0C247B12B1C457B006BB3A8 /* CreateTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247B02B1C457B006BB3A8 /* CreateTransactionView.swift */; };
 		C0C247B32B1C4586006BB3A8 /* CreateTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247B22B1C4586006BB3A8 /* CreateTransactionViewModel.swift */; };
 		C0C247B52B1C5F45006BB3A8 /* SelectItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247B42B1C5F45006BB3A8 /* SelectItemCardView.swift */; };
+		C0C247BA2B1C6F46006BB3A8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247B92B1C6F46006BB3A8 /* ProfileView.swift */; };
+		C0C247BC2B1C6F50006BB3A8 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247BB2B1C6F50006BB3A8 /* ProfileViewModel.swift */; };
+		C0C247BE2B1C7459006BB3A8 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247BD2B1C7459006BB3A8 /* TransactionCardView.swift */; };
 		C0D11DA62B09FCBB007A4D2E /* Fundraiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DA52B09FCBB007A4D2E /* Fundraiser.swift */; };
 		C0D11DA92B09FEAB007A4D2E /* FundraiserCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */; };
 		C0D11DAE2B0A072B007A4D2E /* FundraiserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DAD2B0A072B007A4D2E /* FundraiserView.swift */; };
@@ -77,6 +80,9 @@
 		C0C247B02B1C457B006BB3A8 /* CreateTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionView.swift; sourceTree = "<group>"; };
 		C0C247B22B1C4586006BB3A8 /* CreateTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionViewModel.swift; sourceTree = "<group>"; };
 		C0C247B42B1C5F45006BB3A8 /* SelectItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectItemCardView.swift; sourceTree = "<group>"; };
+		C0C247B92B1C6F46006BB3A8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C0C247BB2B1C6F50006BB3A8 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		C0C247BD2B1C7459006BB3A8 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
 		C0D11DA52B09FCBB007A4D2E /* Fundraiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundraiser.swift; sourceTree = "<group>"; };
 		C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundraiserCardView.swift; sourceTree = "<group>"; };
 		C0D11DAD2B0A072B007A4D2E /* FundraiserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundraiserView.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 				C0D11DAA2B09FEB3007A4D2E /* Fundraiser */,
 				C0C247AD2B1C4541006BB3A8 /* Transaction */,
 				C0B26B482B09F92B00F3633F /* CustomTabBar */,
+				C0C247B62B1C6F18006BB3A8 /* Profile */,
 				C0B26B0D2B09E8DD00F3633F /* Models */,
 				C0B26B0C2B09E8D400F3633F /* Services */,
 				C0B26AFC2B09E47A00F3633F /* CURaiseApp.swift */,
@@ -218,12 +225,38 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		C0C247B62B1C6F18006BB3A8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C0C247B72B1C6F33006BB3A8 /* Views */,
+				C0C247B82B1C6F3B006BB3A8 /* ViewModels */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C0C247B72B1C6F33006BB3A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0C247B92B1C6F46006BB3A8 /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0C247B82B1C6F3B006BB3A8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C0C247BB2B1C6F50006BB3A8 /* ProfileViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		C0D11DA72B09FE9C007A4D2E /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */,
 				C0D11DB12B0A0C3D007A4D2E /* ItemCardView.swift */,
 				C0C247B42B1C5F45006BB3A8 /* SelectItemCardView.swift */,
+				C0C247BD2B1C7459006BB3A8 /* TransactionCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -361,6 +394,7 @@
 				C0D11DB02B0A0733007A4D2E /* FundraiserViewModel.swift in Sources */,
 				C0C247B12B1C457B006BB3A8 /* CreateTransactionView.swift in Sources */,
 				C0B26B4C2B09F97200F3633F /* TabBarItem.swift in Sources */,
+				C0C247BE2B1C7459006BB3A8 /* TransactionCardView.swift in Sources */,
 				C0D11DAE2B0A072B007A4D2E /* FundraiserView.swift in Sources */,
 				C0B26B522B09FAD100F3633F /* ExploreFundraisersView.swift in Sources */,
 				C0B26B572B09FAF900F3633F /* ExploreFundraisersViewModel.swift in Sources */,
@@ -376,7 +410,9 @@
 				C0C247A82B1C2B09006BB3A8 /* Club.swift in Sources */,
 				C0D11DA62B09FCBB007A4D2E /* Fundraiser.swift in Sources */,
 				C0B26B472B09F90600F3633F /* RouterView.swift in Sources */,
+				C0C247BC2B1C6F50006BB3A8 /* ProfileViewModel.swift in Sources */,
 				C0B26B4E2B09F99A00F3633F /* CustomTabBarContainerView.swift in Sources */,
+				C0C247BA2B1C6F46006BB3A8 /* ProfileView.swift in Sources */,
 				C0B26B502B09F9A800F3633F /* TabBarItemsPreferenceKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

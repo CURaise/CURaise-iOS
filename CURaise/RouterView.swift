@@ -15,10 +15,8 @@ struct RouterView: View {
             ExploreFundraisersView()
                 .tabBarItem(tab: .explore, selection: $tabSelection)
             
-            NavigationStack {
-                Text("")
-            }
-            .tabBarItem(tab: .profile, selection: $tabSelection)
+            ProfileView()
+                .tabBarItem(tab: .profile, selection: $tabSelection)
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)
     }

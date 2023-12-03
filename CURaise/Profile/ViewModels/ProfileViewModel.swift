@@ -5,14 +5,11 @@
 //  Created by Steven Yu on 12/3/23.
 //
 
-import SwiftUI
+import Foundation
 
-struct ProfileViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    ProfileViewModel()
+@Observable
+class ProfileViewModel {
+    let user: Student = Student(id: 1, name: "First Last", netid: "fl123", venmoUsername: "username", transactions: sampleTransactions)
+    
+    
 }

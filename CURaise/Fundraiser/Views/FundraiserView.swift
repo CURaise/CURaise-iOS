@@ -110,9 +110,13 @@ struct FundraiserView: View {
 let sampleClub: Club = Club(id: 1, name: "First Club", description: "Club description", venmoUsername: "username")
 let sampleFundraiserItem: FundraiserItem = FundraiserItem(id: 1, name: "Food 1", price: 2, description: "Item description")
 let sampleFundraiserItems: [FundraiserItem] = [sampleFundraiserItem, FundraiserItem(id: 2, name: "Food 2", price: 3, description: "Item description"), FundraiserItem(id: 3, name: "Food 3", price: 4.5, description: "Item description"), FundraiserItem(id: 4, name: "Food 4", price: 4.5, description: "Item description")]
-let sampleTransactions: [Transaction] = [Transaction(id: 1, referenceString: "Referred by: ", fundraiserId: 1, timestamp: Date.now, items: sampleFundraiserItems, buyerId: 1, transactionComplete: false)]
 
-let sampleFundraiser: Fundraiser = Fundraiser(id: 1, club: sampleClub, title: "Fundraiser 1", description: "Fundraiser description", activeStatus: true, createdTime: Date.now, lastModifiedTime: Date.now, startTime: Date.now, endTime: Date.now, items: sampleFundraiserItems, transactions: sampleTransactions)
+let sampleFundraiser: Fundraiser = Fundraiser(id: 1, club: sampleClub, title: "Fundraiser 1", description: "Fundraiser description", activeStatus: true, createdTime: Date.now, lastModifiedTime: Date.now, startTime: Date.now, endTime: Date.now, items: sampleFundraiserItems)
+
+let sampleTransaction = Transaction(id: 1, referenceString: "Referred by: ", fundraiser: sampleFundraiser, timestamp: Date.now, items: sampleFundraiserItems, buyerId: 1, transactionComplete: false)
+
+let sampleTransactions: [Transaction] = [sampleTransaction, Transaction(id: 2, referenceString: "", fundraiser: sampleFundraiser, timestamp: Date.now, items: sampleFundraiserItems, buyerId: 1, transactionComplete: false)]
+
 
 #Preview {
     NavigationStack {

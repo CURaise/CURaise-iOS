@@ -10,7 +10,6 @@
 		C0B26AFD2B09E47A00F3633F /* CURaiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26AFC2B09E47A00F3633F /* CURaiseApp.swift */; };
 		C0B26B012B09E47A00F3633F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B26B002B09E47A00F3633F /* Assets.xcassets */; };
 		C0B26B042B09E47A00F3633F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B26B032B09E47A00F3633F /* Preview Assets.xcassets */; };
-		C0B26B0B2B09E88D00F3633F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B26B0A2B09E88D00F3633F /* AuthenticationManager.swift */; };
 		C0B26B102B09EA8900F3633F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C0B26B0F2B09EA8900F3633F /* FirebaseAnalytics */; };
 		C0B26B122B09EA8900F3633F /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = C0B26B112B09EA8900F3633F /* FirebaseAnalyticsOnDeviceConversion */; };
 		C0B26B142B09EA8900F3633F /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0B26B132B09EA8900F3633F /* FirebaseAnalyticsSwift */; };
@@ -69,7 +68,6 @@
 		C0B26AFC2B09E47A00F3633F /* CURaiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURaiseApp.swift; sourceTree = "<group>"; };
 		C0B26B002B09E47A00F3633F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0B26B032B09E47A00F3633F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C0B26B0A2B09E88D00F3633F /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		C0B26B462B09F90600F3633F /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		C0B26B492B09F95A00F3633F /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		C0B26B4B2B09F97200F3633F /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 		C0B26B0C2B09E8D400F3633F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C0B26B0A2B09E88D00F3633F /* AuthenticationManager.swift */,
 				C0C247C12B1D1975006BB3A8 /* APIService.swift */,
 			);
 			path = Services;
@@ -412,7 +409,6 @@
 				C0C247AC2B1C2B85006BB3A8 /* Transaction.swift in Sources */,
 				C0C247B32B1C4586006BB3A8 /* CreateTransactionViewModel.swift in Sources */,
 				C0D11DB22B0A0C3D007A4D2E /* ItemCardView.swift in Sources */,
-				C0B26B0B2B09E88D00F3633F /* AuthenticationManager.swift in Sources */,
 				C0B26B4A2B09F95A00F3633F /* CustomTabBarView.swift in Sources */,
 				C0B26AFD2B09E47A00F3633F /* CURaiseApp.swift in Sources */,
 				C0D11DA92B09FEAB007A4D2E /* FundraiserCardView.swift in Sources */,

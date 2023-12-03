@@ -27,10 +27,10 @@ struct FundraiserView: View {
                             .frame(height: 50)
                             .padding()
                         
-                        Rectangle() // replace with image later
-                            .fill(Color.gray)
-                            .frame(height: 250)
-                            .cornerRadius(15)
+//                        Rectangle() // replace with image later
+//                            .fill(Color.gray)
+//                            .frame(height: 250)
+//                            .cornerRadius(15)
                         
                         Divider()
                         

@@ -25,5 +25,13 @@ class CreateTransactionViewModel {
         self.orderSuccessful = nil
     }
     
+    func verifyPayment() {
+        
+    }
     
+    func submitTransaction() async {
+        if paymentStatus {
+            
+        }
+    }
 }

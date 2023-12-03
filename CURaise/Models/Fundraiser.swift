@@ -26,11 +26,11 @@ struct Fundraiser: Codable, Identifiable {
         case club
         case title
         case description
-        case activeStatus = "active_status"
-        case createdTime = "created_datetime"
-        case lastModifiedTime = "last_modified_datetime"
-        case startTime = "start_datetime"
-        case endTime = "end_datetime"
+        case activeStatus
+        case createdTime
+        case lastModifiedTime
+        case startTime
+        case endTime
         case items
     }
 }

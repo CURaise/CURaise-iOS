@@ -13,7 +13,9 @@ struct FundraiserCardView: View {
     var body: some View {
         VStack(spacing: 0) {
             Rectangle() // replace with image later
-                    .fill(Color.gray)
+                    .fill(Color(red: .random(in: 0...1),
+                                green: .random(in: 0...1),
+                                blue: .random(in: 0...1)))
                     .frame(height: 125)
             
             

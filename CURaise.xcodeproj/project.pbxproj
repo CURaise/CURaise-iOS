@@ -54,6 +54,9 @@
 		C0C247BA2B1C6F46006BB3A8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247B92B1C6F46006BB3A8 /* ProfileView.swift */; };
 		C0C247BC2B1C6F50006BB3A8 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247BB2B1C6F50006BB3A8 /* ProfileViewModel.swift */; };
 		C0C247BE2B1C7459006BB3A8 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247BD2B1C7459006BB3A8 /* TransactionCardView.swift */; };
+		C0C247C02B1C7EC7006BB3A8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C0C247BF2B1C7EC7006BB3A8 /* Alamofire */; };
+		C0C247C22B1D1975006BB3A8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247C12B1D1975006BB3A8 /* APIService.swift */; };
+		C0C247C42B1D1C52006BB3A8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247C32B1D1C52006BB3A8 /* Response.swift */; };
 		C0D11DA62B09FCBB007A4D2E /* Fundraiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DA52B09FCBB007A4D2E /* Fundraiser.swift */; };
 		C0D11DA92B09FEAB007A4D2E /* FundraiserCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */; };
 		C0D11DAE2B0A072B007A4D2E /* FundraiserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DAD2B0A072B007A4D2E /* FundraiserView.swift */; };
@@ -83,6 +86,8 @@
 		C0C247B92B1C6F46006BB3A8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C0C247BB2B1C6F50006BB3A8 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		C0C247BD2B1C7459006BB3A8 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
+		C0C247C12B1D1975006BB3A8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		C0C247C32B1D1C52006BB3A8 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C0D11DA52B09FCBB007A4D2E /* Fundraiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundraiser.swift; sourceTree = "<group>"; };
 		C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundraiserCardView.swift; sourceTree = "<group>"; };
 		C0D11DAD2B0A072B007A4D2E /* FundraiserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundraiserView.swift; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B26B3A2B09EA8900F3633F /* FirebasePerformance in Frameworks */,
+				C0C247C02B1C7EC7006BB3A8 /* Alamofire in Frameworks */,
 				C0B26B282B09EA8900F3633F /* FirebaseFirestoreCombine-Community in Frameworks */,
 				C0B26B222B09EA8900F3633F /* FirebaseDatabase in Frameworks */,
 				C0B26B402B09EA8900F3633F /* FirebaseStorage in Frameworks */,
@@ -174,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				C0B26B0A2B09E88D00F3633F /* AuthenticationManager.swift */,
+				C0C247C12B1D1975006BB3A8 /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -185,6 +192,7 @@
 				C0C247A72B1C2B09006BB3A8 /* Club.swift */,
 				C0C247A92B1C2B1F006BB3A8 /* Student.swift */,
 				C0C247AB2B1C2B85006BB3A8 /* Transaction.swift */,
+				C0C247C32B1D1C52006BB3A8 /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -332,6 +340,7 @@
 				C0B26B3F2B09EA8900F3633F /* FirebaseStorage */,
 				C0B26B412B09EA8900F3633F /* FirebaseStorageCombine-Community */,
 				C0B26B442B09EAC700F3633F /* Alamofire */,
+				C0C247BF2B1C7EC7006BB3A8 /* Alamofire */,
 			);
 			productName = CURaise;
 			productReference = C0B26AF92B09E47A00F3633F /* CURaise.app */;
@@ -413,7 +422,9 @@
 				C0C247BC2B1C6F50006BB3A8 /* ProfileViewModel.swift in Sources */,
 				C0B26B4E2B09F99A00F3633F /* CustomTabBarContainerView.swift in Sources */,
 				C0C247BA2B1C6F46006BB3A8 /* ProfileView.swift in Sources */,
+				C0C247C22B1D1975006BB3A8 /* APIService.swift in Sources */,
 				C0B26B502B09F9A800F3633F /* TabBarItemsPreferenceKey.swift in Sources */,
+				C0C247C42B1D1C52006BB3A8 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +782,11 @@
 			productName = "FirebaseStorageCombine-Community";
 		};
 		C0B26B442B09EAC700F3633F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0B26B432B09EAC700F3633F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C0C247BF2B1C7EC7006BB3A8 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C0B26B432B09EAC700F3633F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;

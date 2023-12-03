@@ -14,6 +14,4 @@ class FundraiserViewModel {
     init(fundraiser: Fundraiser) {
         self.fundraiser = fundraiser
     }
-    
-    
 }

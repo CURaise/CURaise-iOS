@@ -17,6 +17,6 @@ struct Club: Codable, Identifiable {
         case id
         case name
         case description
-        case venmoUsername = "venmo_username"
+        case venmoUsername
     }
 }

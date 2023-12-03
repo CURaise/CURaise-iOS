@@ -13,7 +13,13 @@ class ExploreFundraisersViewModel {
     
     init() {
         fundraisers = []
-        dummyGetActiveFundraisers()
+        getActiveFundraisers()
+    }
+    
+    func getActiveFundraisers() {
+        Task {
+            fundraisers = await APIService.shared.getFundraisers()
+        }
     }
     
     func dummyGetActiveFundraisers() {

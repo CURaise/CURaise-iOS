@@ -19,6 +19,11 @@ struct RouterView: View {
                 .tabBarItem(tab: .profile, selection: $tabSelection)
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)
+        .onAppear {
+            Task {
+                await APIService.shared.getFundraisers()
+            }
+        }
     }
 }
 

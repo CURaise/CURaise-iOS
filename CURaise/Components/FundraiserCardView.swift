@@ -24,11 +24,11 @@ struct FundraiserCardView: View {
                         .font(.title2)
                     
                     Spacer()
-                    Image(systemName: "clock")
-                    Text(fundraiser.endTime.formatted())
+                    
+                    Label(fundraiser.endTime.formatted(), systemImage: "clock")
                 }
                 
-                Text(fundraiser.club)
+                Text(fundraiser.club.name)
                     .font(.headline)
                 
             }
@@ -41,5 +41,5 @@ struct FundraiserCardView: View {
 }
 
 #Preview {
-    FundraiserCardView(fundraiser: Fundraiser(id: 1, club: "Club One", title: "Fundraiser", description: "Cool Club", startTime: Date.now, endTime: Date.now, items: [], transactions: []))
+    FundraiserCardView(fundraiser: sampleFundraiser)
 }

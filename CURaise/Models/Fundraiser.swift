@@ -9,7 +9,7 @@ import Foundation
 
 struct Fundraiser: Codable, Identifiable {
     let id: Int
-    let club: Club // tentative
+    let club: Club
     let title: String
     let description: String
     let activeStatus: Bool
@@ -20,6 +20,7 @@ struct Fundraiser: Codable, Identifiable {
     let endTime: Date
     
     let items: [FundraiserItem]
+    let transactions: [Transaction]
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -32,6 +33,7 @@ struct Fundraiser: Codable, Identifiable {
         case startTime = "start_datetime"
         case endTime = "end_datetime"
         case items
+        case transactions
     }
 }
 

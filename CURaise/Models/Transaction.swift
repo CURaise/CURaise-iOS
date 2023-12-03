@@ -10,21 +10,21 @@ import Foundation
 struct Transaction: Codable, Identifiable {
     let id: Int
     let referenceString: String // referral text
-    let fundraiser: Fundraiser
+    let fundraiserId: Int
     let timestamp: Date // when the transaction was made
     let items: [FundraiserItem]
     
-    let buyer: Student
+    let buyerId: Int // id of the student who made the transaction
     
-    let status: Bool
+    let transactionComplete: Bool // if transaction was complete (user picked up their purchase)
     
     enum CodingKeys: String, CodingKey {
         case id
         case referenceString
-        case fundraiser
+        case fundraiserId = "fundraiser_id"
         case timestamp
         case items
-        case buyer
-        case status
+        case buyerId = "buyer_id"
+        case transactionComplete = "transaction_complete"
     }
 }

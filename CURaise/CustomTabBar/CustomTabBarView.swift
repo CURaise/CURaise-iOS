@@ -106,9 +106,9 @@ extension CustomTabBarView {
             }
         }
         .padding(6)
-        .background(Color.white.ignoresSafeArea(edges: .bottom))
+        .background(Color(UIColor.systemBackground).ignoresSafeArea(edges: .bottom))
         .cornerRadius(10)
-        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+        .shadow(color: Color.primary.opacity(0.2), radius: 10, x: 0, y: 5)
         .padding(.horizontal)
     }
     

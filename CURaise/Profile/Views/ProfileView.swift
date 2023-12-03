@@ -10,6 +10,8 @@ import SwiftUI
 struct ProfileView: View {
     @Bindable private var vm: ProfileViewModel = ProfileViewModel()
     
+    @State var showDeleteAccount: Bool = false
+    
     var body: some View {
         NavigationStack {
             
@@ -18,6 +20,44 @@ struct ProfileView: View {
                 ScrollView {
                     
                     VStack {
+                        
+                        VStack {
+                            HStack {
+                                Text("Actions")
+                                    .font(.headline)
+                                Spacer()
+                            }
+                            Divider()
+                        }
+                        .padding(.top)
+                        
+                        VStack {
+                            HStack {
+                                Button {
+                                } label: {
+                                    Text("Sign Out")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(maxWidth: .infinity)
+                                        .background(Color.accentColor)
+                                        .cornerRadius(12)
+                                }
+                                
+                                Button {
+                                    showDeleteAccount.toggle()
+                                } label: {
+                                    Text("Delete Account")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(maxWidth: .infinity)
+                                        .background(Color.red)
+                                        .cornerRadius(12)
+                                }
+                            }
+                        }
+                        
                         VStack {
                             HStack {
                                 Text("Your info")
@@ -69,6 +109,17 @@ struct ProfileView: View {
                 
             }
             .navigationTitle("Profile")
+            .alert(
+                "Are you sure you want to delete your account?",
+                isPresented: $showDeleteAccount
+            ) {
+                Button("Delete", role: .destructive) {
+                    
+                }
+                
+                Button("Cancel", role: .cancel) { }
+            }
+            
         }
         
     }

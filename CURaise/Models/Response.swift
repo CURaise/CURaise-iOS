@@ -17,3 +17,14 @@ struct GetFundraisersResponse: Codable {
     let data: [Fundraiser]? // only happens when .success
     let exception: String? // only happens when .error
 }
+
+struct GetProfileResponse: Codable {
+    let message: ResponseType
+    let data: Student? // only happens when .success
+    let exception: String? // only happens when .error
+}
+
+struct CreateUserResponse: Codable {
+    let message: ResponseType
+    let exception: String? // only happens when .error
+}

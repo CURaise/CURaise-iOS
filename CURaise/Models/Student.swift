@@ -9,9 +9,9 @@ import Foundation
 
 struct Student: Codable, Identifiable {
     let id: Int
-    let name: String
-    let netid: String
-    let venmoUsername: String
+    var name: String
+    var netid: String
+    var venmoUsername: String
     let firebaseUid: String
     let transactions: [Transaction]
     

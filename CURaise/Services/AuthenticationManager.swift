@@ -15,9 +15,9 @@ import FirebaseAuth
 class AuthenticationManager {
     
     var isAuthenticated: Bool = false
-    var user: User? = nil
     var authToken: String? = nil
     
+    private var user: User? = nil
     private var handle: AuthStateDidChangeListenerHandle?
     
     static let shared = AuthenticationManager()

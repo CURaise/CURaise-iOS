@@ -10,7 +10,7 @@ import Alamofire
 
 class APIService {
     
-    let baseURL: String = "http://10.48.3.248:8888/api"
+    let baseURL: String = "http://34.28.37.199/api"
     
     // decoder
     private let decoder: JSONDecoder

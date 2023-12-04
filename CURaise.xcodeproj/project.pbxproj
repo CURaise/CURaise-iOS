@@ -102,6 +102,7 @@
 		C0C247D22B1D4426006BB3A8 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		C0C247D42B1D442C006BB3A8 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		C0C247D62B1D533C006BB3A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C0C247D82B1D8285006BB3A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C0D11DA52B09FCBB007A4D2E /* Fundraiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundraiser.swift; sourceTree = "<group>"; };
 		C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundraiserCardView.swift; sourceTree = "<group>"; };
 		C0D11DAD2B0A072B007A4D2E /* FundraiserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundraiserView.swift; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 		C0B26AFB2B09E47A00F3633F /* CURaise */ = {
 			isa = PBXGroup;
 			children = (
+				C0C247D82B1D8285006BB3A8 /* Info.plist */,
 				C0C247D62B1D533C006BB3A8 /* GoogleService-Info.plist */,
 				C0C247CB2B1D42CE006BB3A8 /* Authentication */,
 				C0D11DA72B09FE9C007A4D2E /* Components */,
@@ -613,6 +615,7 @@
 				DEVELOPMENT_TEAM = P5ST498MF7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CURaise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -642,6 +645,7 @@
 				DEVELOPMENT_TEAM = P5ST498MF7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CURaise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

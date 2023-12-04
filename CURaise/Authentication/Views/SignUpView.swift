@@ -1,5 +1,5 @@
 //
-//  SignInView.swift
+//  SignUpView.swift
 //  CURaise
 //
 //  Created by Steven Yu on 12/3/23.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct SignInView: View {
-    @Bindable var vm = SignInViewModel()
+struct SignUpView: View {
+    @Bindable var vm = SignUpViewModel()
     
     var body: some View {
-        VStack {
+        ScrollView {
             VStack {
                 
                 HStack {
-                    Text("Sign In")
+                    Text("Sign Up")
                         .font(.largeTitle)
                         .bold()
                     Spacer()
@@ -33,6 +33,7 @@ struct SignInView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color(UIColor.systemBackground))
                         .cornerRadius(10)
+                        .keyboardType(.emailAddress)
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.never)
                 }
@@ -53,10 +54,55 @@ struct SignInView: View {
                         .textInputAutocapitalization(.never)
                 }
                 
+                VStack {
+                    HStack {
+                        Text("Name")
+                            .font(.headline)
+                        Spacer()
+                    }
+                    TextField("Name", text: $vm.user.name)
+                        .padding(10)
+                        .frame(maxWidth: .infinity)
+                        .background(Color(UIColor.systemBackground))
+                        .cornerRadius(10)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                }
+                
+                VStack {
+                    HStack {
+                        Text("NetID")
+                            .font(.headline)
+                        Spacer()
+                    }
+                    TextField("NetID", text: $vm.user.netid)
+                        .padding(10)
+                        .frame(maxWidth: .infinity)
+                        .background(Color(UIColor.systemBackground))
+                        .cornerRadius(10)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                }
+                
+                VStack {
+                    HStack {
+                        Text("Venmo Username")
+                            .font(.headline)
+                        Spacer()
+                    }
+                    TextField("Venmo Username", text: $vm.user.venmoUsername)
+                        .padding(10)
+                        .frame(maxWidth: .infinity)
+                        .background(Color(UIColor.systemBackground))
+                        .cornerRadius(10)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                }
+                
                 Button {
-                    vm.signIn()
+                    vm.signUp()
                 } label: {
-                    Text("Sign In")
+                    Text("Sign Up")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()
@@ -75,5 +121,5 @@ struct SignInView: View {
 }
 
 #Preview {
-    SignInView()
+    SignUpView()
 }

@@ -24,7 +24,7 @@ struct Transaction: Codable, Identifiable {
         case fundraiser
         case timestamp
         case items
-        case buyerId = "buyer_id"
-        case transactionComplete = "transaction_complete"
+        case buyerId
+        case transactionComplete
     }
 }

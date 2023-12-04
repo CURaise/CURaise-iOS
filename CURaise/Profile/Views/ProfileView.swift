@@ -19,92 +19,107 @@ struct ProfileView: View {
                 
                 ScrollView {
                     
-                    VStack {
+                    if let user = vm.user {
                         
                         VStack {
-                            HStack {
-                                Text("Actions")
-                                    .font(.headline)
-                                Spacer()
-                            }
-                            Divider()
-                        }
-                        .padding(.top)
-                        
-                        VStack {
-                            HStack {
-                                Button {
-                                } label: {
-                                    Text("Sign Out")
+                            
+                            VStack {
+                                HStack {
+                                    Text("Actions")
                                         .font(.headline)
-                                        .foregroundColor(.white)
-                                        .padding()
-                                        .frame(maxWidth: .infinity)
-                                        .background(Color.accentColor)
-                                        .cornerRadius(12)
+                                    Spacer()
+                                }
+                                Divider()
+                            }
+                            .padding(.top)
+                            
+                            VStack {
+                                HStack {
+                                    Button {
+                                        vm.signOut()
+                                    } label: {
+                                        Text("Sign Out")
+                                            .font(.headline)
+                                            .foregroundColor(.white)
+                                            .padding()
+                                            .frame(maxWidth: .infinity)
+                                            .background(Color.accentColor)
+                                            .cornerRadius(12)
+                                    }
+                                    
+                                    Button {
+                                        showDeleteAccount.toggle()
+                                    } label: {
+                                        Text("Delete Account")
+                                            .font(.headline)
+                                            .foregroundColor(.white)
+                                            .padding()
+                                            .frame(maxWidth: .infinity)
+                                            .background(Color.red)
+                                            .cornerRadius(12)
+                                    }
+                                }
+                            }
+                            
+                            VStack {
+                                HStack {
+                                    Text("Your info")
+                                        .font(.headline)
+                                    Spacer()
+                                }
+                                Divider()
+                            }
+                            .padding(.top)
+                            
+                            VStack {
+                                HStack {
+                                    Text("Name: \(user.name)")
+                                    Spacer()
                                 }
                                 
-                                Button {
-                                    showDeleteAccount.toggle()
-                                } label: {
-                                    Text("Delete Account")
-                                        .font(.headline)
-                                        .foregroundColor(.white)
-                                        .padding()
-                                        .frame(maxWidth: .infinity)
-                                        .background(Color.red)
-                                        .cornerRadius(12)
+                                HStack {
+                                    Text("NetID: \(user.netid)")
+                                    Spacer()
+                                }
+                                
+                                HStack {
+                                    Text("Venmo username: @\(user.venmoUsername)")
+                                    Spacer()
                                 }
                             }
-                        }
-                        
-                        VStack {
-                            HStack {
-                                Text("Your info")
-                                    .font(.headline)
-                                Spacer()
+                            
+                            VStack {
+                                HStack {
+                                    Text("Your transactions")
+                                        .font(.headline)
+                                    Spacer()
+                                }
+                                Divider()
                             }
-                            Divider()
-                        }
-                        .padding(.top)
-                        
-                        VStack {
-                            HStack {
-                                Text("Name: \(vm.user.name)")
-                                Spacer()
+                            .padding(.top)
+                            
+                            if user.transactions.isEmpty {
+                                Text("No transactions yet.")
+                            } else {
+                                ForEach(user.transactions) { transaction in
+                                    TransactionCardView(transaction: transaction)
+                                }
                             }
                             
-                            HStack {
-                                Text("NetID: \(vm.user.netid)")
-                                Spacer()
-                            }
-                            
-                            HStack {
-                                Text("Venmo username: @\(vm.user.venmoUsername)")
-                                Spacer()
-                            }
                         }
-                        
-                        VStack {
-                            HStack {
-                                Text("Your transactions")
-                                    .font(.headline)
-                                Spacer()
-                            }
-                            Divider()
-                        }
-                        .padding(.top)
-                        
-                        ForEach(vm.user.transactions) { transaction in
-                            TransactionCardView(transaction: transaction)
-                        }
+                        .padding(.horizontal)
+                    } else {
+                        Text("Couldn't retrieve profile.")
                     }
-                    .padding(.horizontal)
                     
                     
                     // for custom navbar
                     Spacer()
                         .frame(height: 80)
+                }
+                .refreshable {
+                    print("Refreshed profile")
+                    vm.getUser()
                 }
                 
             }

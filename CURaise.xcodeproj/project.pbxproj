@@ -56,6 +56,14 @@
 		C0C247C02B1C7EC7006BB3A8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C0C247BF2B1C7EC7006BB3A8 /* Alamofire */; };
 		C0C247C22B1D1975006BB3A8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247C12B1D1975006BB3A8 /* APIService.swift */; };
 		C0C247C42B1D1C52006BB3A8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247C32B1D1C52006BB3A8 /* Response.swift */; };
+		C0C247C62B1D2F72006BB3A8 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247C52B1D2F72006BB3A8 /* AuthenticationManager.swift */; };
+		C0C247C82B1D421E006BB3A8 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247C72B1D421E006BB3A8 /* AppView.swift */; };
+		C0C247CA2B1D4228006BB3A8 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247C92B1D4228006BB3A8 /* AuthenticationView.swift */; };
+		C0C247CF2B1D4419006BB3A8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247CE2B1D4419006BB3A8 /* SignUpView.swift */; };
+		C0C247D12B1D441E006BB3A8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247D02B1D441E006BB3A8 /* SignInView.swift */; };
+		C0C247D32B1D4426006BB3A8 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247D22B1D4426006BB3A8 /* SignUpViewModel.swift */; };
+		C0C247D52B1D442C006BB3A8 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C247D42B1D442C006BB3A8 /* SignInViewModel.swift */; };
+		C0C247D72B1D533C006BB3A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0C247D62B1D533C006BB3A8 /* GoogleService-Info.plist */; };
 		C0D11DA62B09FCBB007A4D2E /* Fundraiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DA52B09FCBB007A4D2E /* Fundraiser.swift */; };
 		C0D11DA92B09FEAB007A4D2E /* FundraiserCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */; };
 		C0D11DAE2B0A072B007A4D2E /* FundraiserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D11DAD2B0A072B007A4D2E /* FundraiserView.swift */; };
@@ -86,6 +94,14 @@
 		C0C247BD2B1C7459006BB3A8 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
 		C0C247C12B1D1975006BB3A8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C0C247C32B1D1C52006BB3A8 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		C0C247C52B1D2F72006BB3A8 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		C0C247C72B1D421E006BB3A8 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		C0C247C92B1D4228006BB3A8 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		C0C247CE2B1D4419006BB3A8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C0C247D02B1D441E006BB3A8 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		C0C247D22B1D4426006BB3A8 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		C0C247D42B1D442C006BB3A8 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		C0C247D62B1D533C006BB3A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C0D11DA52B09FCBB007A4D2E /* Fundraiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundraiser.swift; sourceTree = "<group>"; };
 		C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundraiserCardView.swift; sourceTree = "<group>"; };
 		C0D11DAD2B0A072B007A4D2E /* FundraiserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundraiserView.swift; sourceTree = "<group>"; };
@@ -151,14 +167,17 @@
 		C0B26AFB2B09E47A00F3633F /* CURaise */ = {
 			isa = PBXGroup;
 			children = (
+				C0C247D62B1D533C006BB3A8 /* GoogleService-Info.plist */,
+				C0C247CB2B1D42CE006BB3A8 /* Authentication */,
 				C0D11DA72B09FE9C007A4D2E /* Components */,
 				C0D11DAA2B09FEB3007A4D2E /* Fundraiser */,
 				C0C247AD2B1C4541006BB3A8 /* Transaction */,
-				C0B26B482B09F92B00F3633F /* CustomTabBar */,
 				C0C247B62B1C6F18006BB3A8 /* Profile */,
 				C0B26B0D2B09E8DD00F3633F /* Models */,
 				C0B26B0C2B09E8D400F3633F /* Services */,
 				C0B26AFC2B09E47A00F3633F /* CURaiseApp.swift */,
+				C0C247C72B1D421E006BB3A8 /* AppView.swift */,
+				C0C247C92B1D4228006BB3A8 /* AuthenticationView.swift */,
 				C0B26B462B09F90600F3633F /* RouterView.swift */,
 				C0B26B002B09E47A00F3633F /* Assets.xcassets */,
 				C0B26B022B09E47A00F3633F /* Preview Content */,
@@ -178,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				C0C247C12B1D1975006BB3A8 /* APIService.swift */,
+				C0C247C52B1D2F72006BB3A8 /* AuthenticationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -255,9 +275,37 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		C0C247CB2B1D42CE006BB3A8 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				C0C247CC2B1D42D7006BB3A8 /* Views */,
+				C0C247CD2B1D42DD006BB3A8 /* ViewModels */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		C0C247CC2B1D42D7006BB3A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0C247CE2B1D4419006BB3A8 /* SignUpView.swift */,
+				C0C247D02B1D441E006BB3A8 /* SignInView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0C247CD2B1D42DD006BB3A8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C0C247D22B1D4426006BB3A8 /* SignUpViewModel.swift */,
+				C0C247D42B1D442C006BB3A8 /* SignInViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		C0D11DA72B09FE9C007A4D2E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C0B26B482B09F92B00F3633F /* CustomTabBar */,
 				C0D11DA82B09FEAB007A4D2E /* FundraiserCardView.swift */,
 				C0D11DB12B0A0C3D007A4D2E /* ItemCardView.swift */,
 				C0C247B42B1C5F45006BB3A8 /* SelectItemCardView.swift */,
@@ -387,6 +435,7 @@
 			files = (
 				C0B26B042B09E47A00F3633F /* Preview Assets.xcassets in Resources */,
 				C0B26B012B09E47A00F3633F /* Assets.xcassets in Resources */,
+				C0C247D72B1D533C006BB3A8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,12 +446,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C247D52B1D442C006BB3A8 /* SignInViewModel.swift in Sources */,
+				C0C247C82B1D421E006BB3A8 /* AppView.swift in Sources */,
 				C0D11DB02B0A0733007A4D2E /* FundraiserViewModel.swift in Sources */,
 				C0C247B12B1C457B006BB3A8 /* CreateTransactionView.swift in Sources */,
 				C0B26B4C2B09F97200F3633F /* TabBarItem.swift in Sources */,
 				C0C247BE2B1C7459006BB3A8 /* TransactionCardView.swift in Sources */,
+				C0C247CA2B1D4228006BB3A8 /* AuthenticationView.swift in Sources */,
 				C0D11DAE2B0A072B007A4D2E /* FundraiserView.swift in Sources */,
 				C0B26B522B09FAD100F3633F /* ExploreFundraisersView.swift in Sources */,
+				C0C247D12B1D441E006BB3A8 /* SignInView.swift in Sources */,
 				C0B26B572B09FAF900F3633F /* ExploreFundraisersViewModel.swift in Sources */,
 				C0C247AA2B1C2B1F006BB3A8 /* Student.swift in Sources */,
 				C0C247B52B1C5F45006BB3A8 /* SelectItemCardView.swift in Sources */,
@@ -410,14 +463,17 @@
 				C0C247B32B1C4586006BB3A8 /* CreateTransactionViewModel.swift in Sources */,
 				C0D11DB22B0A0C3D007A4D2E /* ItemCardView.swift in Sources */,
 				C0B26B4A2B09F95A00F3633F /* CustomTabBarView.swift in Sources */,
+				C0C247C62B1D2F72006BB3A8 /* AuthenticationManager.swift in Sources */,
 				C0B26AFD2B09E47A00F3633F /* CURaiseApp.swift in Sources */,
 				C0D11DA92B09FEAB007A4D2E /* FundraiserCardView.swift in Sources */,
 				C0C247A82B1C2B09006BB3A8 /* Club.swift in Sources */,
 				C0D11DA62B09FCBB007A4D2E /* Fundraiser.swift in Sources */,
 				C0B26B472B09F90600F3633F /* RouterView.swift in Sources */,
+				C0C247D32B1D4426006BB3A8 /* SignUpViewModel.swift in Sources */,
 				C0C247BC2B1C6F50006BB3A8 /* ProfileViewModel.swift in Sources */,
 				C0B26B4E2B09F99A00F3633F /* CustomTabBarContainerView.swift in Sources */,
 				C0C247BA2B1C6F46006BB3A8 /* ProfileView.swift in Sources */,
+				C0C247CF2B1D4419006BB3A8 /* SignUpView.swift in Sources */,
 				C0C247C22B1D1975006BB3A8 /* APIService.swift in Sources */,
 				C0B26B502B09F9A800F3633F /* TabBarItemsPreferenceKey.swift in Sources */,
 				C0C247C42B1D1C52006BB3A8 /* Response.swift in Sources */,

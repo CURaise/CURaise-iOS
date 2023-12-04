@@ -28,3 +28,13 @@ struct CreateUserResponse: Codable {
     let message: ResponseType
     let exception: String? // only happens when .error
 }
+
+struct VerifyPaymentResponse: Codable {
+    let message: ResponseType
+    let exception: String? // only happens when .error
+}
+
+struct CreateTransactionResponse: Codable {
+    let message: ResponseType
+    let exception: String?
+}

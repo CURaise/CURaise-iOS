@@ -17,12 +17,16 @@ struct ExploreFundraisersView: View {
                 
                 ScrollView {
                     VStack {
-                        ForEach(vm.fundraisers) { fundraiser in
-                            NavigationLink {
-                                FundraiserView(fundraiser: fundraiser)
-                            } label: {
-                                FundraiserCardView(fundraiser: fundraiser)
-                                    .foregroundColor(.primary)
+                        if vm.fundraisers.isEmpty {
+                            Text("No fundraisers yet.")
+                        } else {
+                            ForEach(vm.fundraisers) { fundraiser in
+                                NavigationLink {
+                                    FundraiserView(fundraiser: fundraiser)
+                                } label: {
+                                    FundraiserCardView(fundraiser: fundraiser)
+                                        .foregroundColor(.primary)
+                                }
                             }
                         }
                     }
@@ -32,6 +36,10 @@ struct ExploreFundraisersView: View {
                     Spacer()
                         .frame(height: 80)
                     
+                }
+                .refreshable {
+                    print("Refreshed fundraisers")
+                    vm.getActiveFundraisers()
                 }
             }
             .navigationTitle("Upcoming Fundraisers")

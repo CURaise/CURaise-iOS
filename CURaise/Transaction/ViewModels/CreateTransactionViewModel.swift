@@ -26,12 +26,16 @@ class CreateTransactionViewModel {
     }
     
     func verifyPayment() {
-        
+        Task {
+            paymentStatus = await APIService.shared.verifyPayment(transaction: transaction)
+        }
     }
     
     func submitTransaction() async {
         if paymentStatus {
-            
+            orderSuccessful = await APIService.shared.createTransaction(transaction: transaction)
+        } else {
+            print("Payment not verified!")
         }
     }
 }

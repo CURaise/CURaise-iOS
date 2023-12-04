@@ -96,7 +96,7 @@ struct CreateTransactionView: View {
                             }
                             
                             Button {
-                                
+                                vm.verifyPayment()
                             } label: {
                                 Text("Verify Venmo Payment")
                                     .font(.headline)
@@ -126,7 +126,8 @@ struct CreateTransactionView: View {
                             
                             Button {
                                 Task {
-                                    // get response then wait 2 seconds and then dismiss
+                                    await vm.submitTransaction()
+                                    try await Task.sleep(nanoseconds: 1_000_000_000)
                                     dismiss()
                                 }
                             } label: {

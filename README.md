@@ -1,3 +1,10 @@
-# CURaise-iOS
+# CURaise iOS App
 
-iOS side of the CURaise app
+## Description
+SwiftUI-based iOS app for CURaise, a fundraising app for Cornell student organizations.
+
+## Tech Stack
+- SwiftUI
+- Swift Async/Await
+- Firebase (Firebase Auth)
+- Alamofire
